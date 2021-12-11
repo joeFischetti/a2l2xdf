@@ -281,7 +281,10 @@ def coefficients_to_equation(coefficients):
 root, xdfheader = xdf_root_with_configuration(argv[1])
 xdf_add_category(xdfheader, "Axis")
 
+
+
 with open(argv[2], encoding="utf-8-sig") as csvfile:
+    print("Reading " + argv[2])
     csvreader = csv.DictReader(csvfile)
     for row in csvreader:
         tablename = row["Table Name"]
